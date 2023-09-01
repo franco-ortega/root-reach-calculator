@@ -1,0 +1,18 @@
+[
+  {
+    "faction": "Marquisate de Cat",
+    "reach": 10
+  },
+  {
+    "faction": "Eyrie",
+    "reach": 7
+  },
+  {
+    "faction": "Vagabond",
+    "reach": 5
+  },
+  {
+    "faction": "Woodland Alliance",
+    "reach": 3
+  }
+]
