@@ -1,18 +1,18 @@
 [
   {
-    "faction": "Marquisate de Cat",
+    "title": "Marquisate de Cat",
     "reach": 10
   },
   {
-    "faction": "Eyrie",
+    "title": "Eyrie",
     "reach": 7
   },
   {
-    "faction": "Vagabond",
+    "title": "Vagabond",
     "reach": 5
   },
   {
-    "faction": "Woodland Alliance",
+    "title": "Woodland Alliance",
     "reach": 3
   }
 ]

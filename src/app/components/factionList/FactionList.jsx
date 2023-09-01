@@ -12,10 +12,10 @@ export default function FactionList() {
   return (
     <ul>
       <li>Faction - Reach</li>
-      {factions.map(({ faction, reach }) => (
+      {factions.map(({ title, reach }) => (
         <Faction
-          key={faction}
-          faction={faction}
+          key={title}
+          title={title}
           reach={reach}
           setSelectedFactions={setSelectedFactions}
         />
