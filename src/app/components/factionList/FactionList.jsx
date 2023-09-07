@@ -2,12 +2,10 @@
 
 import factions from '../../../data/factions';
 import { useEffect, useState } from 'react';
-import Faction from '../Faction/Faction';
+import Faction from '../faction/Faction';
 
 export default function FactionList() {
   const [selectedFactions, setSelectedFactions] = useState([]);
-
-  console.log('SELECTED FACTIONS:', selectedFactions);
 
   return (
     <ul>
