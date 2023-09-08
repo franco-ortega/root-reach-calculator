@@ -3,8 +3,14 @@
   flex-direction: column;
   /* justify-content: space-between; */
   align-items: center;
-  /* padding: 6rem; */
+  padding: 1rem;
   min-height: 100vh;
+}
+
+.main h1 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 /* Enable hover only on non-touch devices */
