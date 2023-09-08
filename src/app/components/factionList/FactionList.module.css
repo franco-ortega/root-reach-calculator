@@ -1,14 +1,3 @@
-.FactionList {
-  margin-block: 1rem;
-}
-
-.FactionList h3 {
-  text-decoration: underline;
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 0.25rem;
-}
-
 .FactionList li {
   margin-bottom: 0.25rem;
 }
