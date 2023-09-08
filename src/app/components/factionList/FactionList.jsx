@@ -1,15 +1,16 @@
 'use client';
 
+import { useState } from 'react';
 import factions from '../../../data/factions';
-import { useEffect, useState } from 'react';
 import Faction from '../faction/Faction';
+import styles from './FactionList.module.css';
 
 export default function FactionList() {
   const [selectedFactions, setSelectedFactions] = useState([]);
 
   return (
-    <ul>
-      <li>Faction - Reach</li>
+    <ul className={styles.FactionList}>
+      <h3>Faction - Reach</h3>
       {factions.map(({ title, reach }) => (
         <Faction
           key={title}
@@ -18,9 +19,9 @@ export default function FactionList() {
           setSelectedFactions={setSelectedFactions}
         />
       ))}
-      <div>
+      <li>
         Total Reach: {selectedFactions.reduce((acc, cur) => acc + cur.reach, 0)}
-      </div>
+      </li>
     </ul>
   );
 }
