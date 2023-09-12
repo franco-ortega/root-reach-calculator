@@ -10,7 +10,7 @@ export default function SelectPlayerCount({ setReach }) {
       <select onChange={({ target }) => setReach(Number(target.value))}>
         <option></option>
         {reachList.map((playerCount) => (
-          <option key={playerCount[0]} value={playerCount[0]}>
+          <option key={playerCount[0]} value={playerCount[1]}>
             {playerCount[0]} Players
           </option>
         ))}
