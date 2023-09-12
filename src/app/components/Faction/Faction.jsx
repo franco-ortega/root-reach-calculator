@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import styles from './Faction.module.css';
 
 export default function Faction({ title, reach, setSelectedFactions }) {
   const [isChecked, setIsChecked] = useState(false);
@@ -14,11 +15,13 @@ export default function Faction({ title, reach, setSelectedFactions }) {
   }, [title, reach, isChecked, setSelectedFactions]);
 
   return (
-    <li>
+    <li className={styles.Faction}>
       <label htmlFor={title}>
         <input id={title} type='checkbox' onChange={handleChange} />
+        <span>
+          {title} - {reach}
+        </span>
       </label>
-      <span>{title}</span> - <span>{reach}</span>
     </li>
   );
 }
