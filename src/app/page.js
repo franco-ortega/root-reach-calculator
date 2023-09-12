@@ -1,6 +1,5 @@
-import Factions from './components/factions/Factions';
 import ReachPerPlayerCount from './components/reachPerPlayerCount/ReachPerPlayerCount';
-import SelectPlayerCount from './components/selectPlayerCount/SelectPlayerCount';
+import SelectFactions from './components/selectFactions/SelectFactions';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -8,8 +7,7 @@ export default function Home() {
     <main className={styles.main}>
       <h1>Root Reach Calculator</h1>
       <ReachPerPlayerCount />
-      <SelectPlayerCount />
-      <Factions />
+      <SelectFactions />
     </main>
   );
 }
