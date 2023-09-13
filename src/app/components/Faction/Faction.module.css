@@ -1,0 +1,11 @@
+.Faction {
+  font-size: 1rem;
+}
+
+.Faction input {
+  margin-right: 0.5rem;
+}
+
+.Faction input:checked + span {
+  background-color: bisque;
+}
