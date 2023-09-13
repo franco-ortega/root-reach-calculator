@@ -1,6 +1,6 @@
 'use client';
 
-import factions from '../../data/factions';
+import factions from '../../../data/factions';
 import Faction from '../faction/Faction';
 import styles from './FactionList.module.css';
 
