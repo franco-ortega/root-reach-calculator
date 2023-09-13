@@ -1,7 +1,7 @@
 'use client';
 
 import factions from '../../../data/factions';
-import Faction from '../faction/Faction';
+import Faction from '../faction/faction';
 import styles from './FactionList.module.css';
 
 export default function FactionList({ setSelectedFactions }) {
