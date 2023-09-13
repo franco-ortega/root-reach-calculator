@@ -1,4 +1,4 @@
-import reachData from '../../../data/reach';
+import reachData from '../../data/reach';
 import styles from './SelectPlayerCount.module.css';
 
 export default function SelectPlayerCount({ setReach }) {
