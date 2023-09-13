@@ -1,4 +1,4 @@
-import reach from '../../../data/reach';
+import reach from '../../data/reach';
 import styles from './ReachPerPlayerCount.module.css';
 
 export default function ReachPerPlayerCount() {
