@@ -1,11 +1,18 @@
 'use client';
 
 import { useState } from 'react';
+import reachData from '../../data/reach';
 import FactionList from '../factionList/FactionList';
 import styles from './Factions.module.css';
 
-export default function Factions({ reach }) {
+export default function Factions({ playerCount }) {
   const [selectedFactions, setSelectedFactions] = useState([]);
+
+  let reach = 0;
+
+  for (let players in reachData) {
+    if (players == playerCount) reach = reachData[playerCount];
+  }
 
   return (
     <div className={styles.Factions}>

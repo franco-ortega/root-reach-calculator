@@ -1,17 +1,21 @@
 import reachData from '../../data/reach';
 import styles from './SelectPlayerCount.module.css';
 
-export default function SelectPlayerCount({ setReach }) {
+export default function SelectPlayerCount({ setPlayerCount }) {
   const reachList = Object.entries(reachData);
+
+  const onPlayerCountChange = ({ target }) => {
+    setPlayerCount(Number(target.value));
+  };
 
   return (
     <div className={styles.SelectPlayerCount}>
       <h3>Select Player Count</h3>
-      <select onChange={({ target }) => setReach(Number(target.value))}>
+      <select onChange={onPlayerCountChange}>
         <option></option>
-        {reachList.map((playerCount) => (
-          <option key={playerCount[0]} value={playerCount[1]}>
-            {playerCount[0]} Players
+        {reachList.map(([playerCount]) => (
+          <option key={playerCount} value={playerCount}>
+            {playerCount} Players
           </option>
         ))}
       </select>
