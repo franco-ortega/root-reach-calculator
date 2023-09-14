@@ -10,6 +10,11 @@ export default function Factions({ playerCount }) {
 
   let reach = 0;
 
+  const factionCount = selectedFactions.length;
+  const isPlayerCountFull = playerCount === factionCount && playerCount > 0;
+
+  console.log({ factionCount, playerCount, isPlayerCountFull });
+
   for (let players in reachData) {
     if (players == playerCount) reach = reachData[playerCount];
   }
@@ -17,11 +22,12 @@ export default function Factions({ playerCount }) {
   return (
     <div className={styles.Factions}>
       <h3>Faction - Reach</h3>
-      <FactionList setSelectedFactions={setSelectedFactions} />
-      Total Reach: {selectedFactions.reduce(
-        (acc, cur) => acc + cur.reach,
-        0
-      )} / {reach}
+      <FactionList
+        setSelectedFactions={setSelectedFactions}
+        isPlayerCountFull={isPlayerCountFull}
+      />
+      Total Reach: {selectedFactions.reduce((acc, cur) => acc + cur.reach, 0)} /{' '}
+      {reach}
     </div>
   );
 }

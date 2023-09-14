@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react';
 import styles from './Faction.module.css';
 
-export default function Faction({ title, reach, setSelectedFactions }) {
+export default function Faction({
+  title,
+  reach,
+  setSelectedFactions,
+  isPlayerCountFull,
+}) {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = () => setIsChecked((prev) => !prev);
@@ -17,7 +22,12 @@ export default function Faction({ title, reach, setSelectedFactions }) {
   return (
     <li className={styles.Faction}>
       <label htmlFor={title}>
-        <input id={title} type='checkbox' onChange={handleChange} />
+        <input
+          id={title}
+          type='checkbox'
+          disabled={isPlayerCountFull}
+          onChange={handleChange}
+        />
         <span>
           {title} - {reach}
         </span>
