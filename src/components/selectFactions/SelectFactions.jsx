@@ -10,7 +10,7 @@ export default function SelectFactions() {
   return (
     <>
       <SelectPlayerCount setPlayerCount={setPlayerCount} />
-      <Factions playerCount={playerCount} />
+      {playerCount > 0 && <Factions playerCount={playerCount} />}
     </>
   );
 }
