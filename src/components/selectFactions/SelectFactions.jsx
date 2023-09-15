@@ -5,12 +5,12 @@ import Factions from '../factions/Factions';
 import SelectPlayerCount from '../selectPlayerCount/SelectPlayerCount';
 
 export default function SelectFactions() {
-  const [reach, setReach] = useState(0);
+  const [playerCount, setPlayerCount] = useState(0);
 
   return (
     <>
-      <SelectPlayerCount setReach={setReach} />
-      <Factions reach={reach} />
+      <SelectPlayerCount setPlayerCount={setPlayerCount} />
+      <Factions playerCount={playerCount} />
     </>
   );
 }

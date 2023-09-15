@@ -1,0 +1,33 @@
+'use client';
+
+import { useState } from 'react';
+import reachData from '../../data/reach';
+import FactionList from '../factionList/FactionList';
+import styles from './Factions.module.css';
+
+export default function Factions({ playerCount }) {
+  const [selectedFactions, setSelectedFactions] = useState([]);
+
+  let reach = 0;
+
+  const factionCount = selectedFactions.length;
+  const isPlayerCountFull = playerCount === factionCount && playerCount > 0;
+
+  console.log({ factionCount, playerCount, isPlayerCountFull });
+
+  for (let players in reachData) {
+    if (players == playerCount) reach = reachData[playerCount];
+  }
+
+  return (
+    <div className={styles.Factions}>
+      <h3>Faction - Reach</h3>
+      <FactionList
+        setSelectedFactions={setSelectedFactions}
+        isPlayerCountFull={isPlayerCountFull}
+      />
+      Total Reach: {selectedFactions.reduce((acc, cur) => acc + cur.reach, 0)} /{' '}
+      {reach}
+    </div>
+  );
+}

@@ -1,10 +1,13 @@
 'use client';
 
-import factions from '../../../data/factions';
-import Faction from '../faction/Faction';
+import factions from '../../data/factions';
+import Faction from '../faction/faction';
 import styles from './FactionList.module.css';
 
-export default function FactionList({ setSelectedFactions }) {
+export default function FactionList({
+  setSelectedFactions,
+  isPlayerCountFull,
+}) {
   return (
     <ul className={styles.FactionList}>
       {factions.map(({ title, reach }) => (
@@ -13,6 +16,7 @@ export default function FactionList({ setSelectedFactions }) {
           title={title}
           reach={reach}
           setSelectedFactions={setSelectedFactions}
+          isPlayerCountFull={isPlayerCountFull}
         />
       ))}
     </ul>
