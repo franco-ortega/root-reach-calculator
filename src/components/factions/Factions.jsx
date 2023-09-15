@@ -23,8 +23,11 @@ export default function Factions({ playerCount }) {
         setSelectedFactions={setSelectedFactions}
         isPlayerCountFull={isPlayerCountFull}
       />
-      Total Reach: {selectedFactions.reduce((acc, cur) => acc + cur.reach, 0)} /{' '}
-      {reach}
+      <p>
+        Current Reach:{' '}
+        {selectedFactions.reduce((acc, cur) => acc + cur.reach, 0)}
+      </p>
+      <p>Required Reach: {reach}</p>
     </div>
   );
 }
