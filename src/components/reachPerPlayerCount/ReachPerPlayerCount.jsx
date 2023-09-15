@@ -10,7 +10,7 @@ export default function ReachPerPlayerCount() {
       <ul>
         {data.map(([playerCount, reach]) => (
           <li key={playerCount}>
-            <span>{playerCount} Players</span> - <span>Reach: {reach}</span>
+            {playerCount} Players - Reach: {reach}
           </li>
         ))}
       </ul>
