@@ -1,8 +1,5 @@
 .SelectPlayerCount {
-  border: black solid 0.1rem;
-  border-radius: 0.25rem;
-  margin: 1rem;
-  padding: 1rem;
+  background-color: hsl(0, 0%, 50%, 0.25);
   text-align: center;
 }
 
