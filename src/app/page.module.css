@@ -1,16 +1,10 @@
 .main {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   /* justify-content: space-between; */
-  align-items: center;
+  /* align-items: center; */
   padding: 1rem;
   min-height: 100vh;
-}
-
-.main h1 {
-  margin-bottom: 1rem;
-  font-weight: 600;
-  text-decoration: underline;
 }
 
 /* Enable hover only on non-touch devices */
