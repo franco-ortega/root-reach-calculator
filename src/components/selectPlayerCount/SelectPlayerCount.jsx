@@ -10,7 +10,7 @@ export default function SelectPlayerCount({ setPlayerCount }) {
 
   return (
     <div className={styles.SelectPlayerCount}>
-      <h3>Select Player Count</h3>
+      <h2>Select Player Count</h2>
       <select onChange={onPlayerCountChange}>
         <option></option>
         {reachList.map(([playerCount]) => (

@@ -1,6 +1,6 @@
 import Header from '@/components/header/Header';
 import ReachPerPlayerCount from '../components/reachPerPlayerCount/ReachPerPlayerCount';
-import SelectFactions from '../components/selectFactions/SelectFactions';
+import SelectPlayersAndFactions from '@/components/selectPlayersAndFactions/SelectPlayersAndFactions';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
       <Header />
       <main className={styles.main}>
         <ReachPerPlayerCount />
-        <SelectFactions />
+        <SelectPlayersAndFactions />
       </main>
     </>
   );

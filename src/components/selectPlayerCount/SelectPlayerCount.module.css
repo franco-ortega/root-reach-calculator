@@ -1,9 +1,9 @@
 .SelectPlayerCount {
-  background-color: hsl(0, 0%, 50%, 0.25);
   text-align: center;
 }
 
-.SelectPlayerCount h3 {
+.SelectPlayerCount h2 {
+  font-size: 1.25rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }

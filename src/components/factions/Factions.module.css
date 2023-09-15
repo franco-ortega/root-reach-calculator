@@ -1,5 +1,6 @@
 .Factions {
-  margin-block: 1rem;
+  margin-inline: auto;
+  width: fit-content;
 }
 
 .Factions h3 {
