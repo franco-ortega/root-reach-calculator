@@ -1,12 +1,9 @@
 .SelectPlayerCount {
-  border: black solid 0.1rem;
-  border-radius: 0.25rem;
-  margin: 1rem;
-  padding: 1rem;
   text-align: center;
 }
 
-.SelectPlayerCount h3 {
+.SelectPlayerCount h2 {
+  font-size: 1.25rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }

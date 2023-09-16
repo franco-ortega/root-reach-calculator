@@ -1,16 +1,10 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; */
-  align-items: center;
-  padding: 1rem;
+  padding-block: 1rem;
   min-height: 100vh;
-}
+  min-width: 50ch;
 
-.main h1 {
-  margin-bottom: 1rem;
-  font-weight: 600;
-  text-decoration: underline;
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
 
 /* Enable hover only on non-touch devices */

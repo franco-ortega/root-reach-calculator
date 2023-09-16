@@ -8,13 +8,15 @@ import styles from './Factions.module.css';
 export default function Factions({ playerCount }) {
   const [selectedFactions, setSelectedFactions] = useState([]);
 
-  let reach = 0;
-
   const factionCount = selectedFactions.length;
   const isPlayerCountFull = playerCount === factionCount && playerCount > 0;
 
-  console.log({ factionCount, playerCount, isPlayerCountFull });
+  const currentReach = selectedFactions.reduce(
+    (acc, cur) => acc + cur.reach,
+    0
+  );
 
+  let reach = 0;
   for (let players in reachData) {
     if (players == playerCount) reach = reachData[playerCount];
   }
@@ -26,8 +28,8 @@ export default function Factions({ playerCount }) {
         setSelectedFactions={setSelectedFactions}
         isPlayerCountFull={isPlayerCountFull}
       />
-      Total Reach: {selectedFactions.reduce((acc, cur) => acc + cur.reach, 0)} /{' '}
-      {reach}
+      <p>Current Reach: {currentReach}</p>
+      <p>Required Reach: {reach}</p>
     </div>
   );
 }

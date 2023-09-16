@@ -25,7 +25,7 @@ export default function Faction({
         <input
           id={title}
           type='checkbox'
-          disabled={isPlayerCountFull}
+          disabled={isPlayerCountFull && !isChecked}
           onChange={handleChange}
         />
         <span>
