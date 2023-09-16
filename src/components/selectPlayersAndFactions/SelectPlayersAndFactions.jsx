@@ -8,9 +8,13 @@ import styles from './SelectPlayersAndFactions.module.css';
 export default function SelectPlayersAndFactions() {
   const [playerCount, setPlayerCount] = useState(0);
 
+  const handlePlayerCount = (event) => {
+    setPlayerCount(Number(event.target.value));
+  };
+
   return (
     <div className={styles.SelectPlayersAndFactions}>
-      <SelectPlayerCount setPlayerCount={setPlayerCount} />
+      <SelectPlayerCount handlePlayerCount={handlePlayerCount} />
       {playerCount > 0 && <Factions playerCount={playerCount} />}
     </div>
   );
