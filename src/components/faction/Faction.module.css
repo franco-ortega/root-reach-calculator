@@ -7,5 +7,10 @@
 }
 
 .Faction input:checked + span {
-  background-color: bisque;
+  color: green;
+}
+
+.Faction input:disabled,
+.Faction input:disabled + span {
+  opacity: 50%;
 }
