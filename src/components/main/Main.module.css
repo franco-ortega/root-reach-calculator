@@ -1,0 +1,7 @@
+.Main {
+  min-height: 100vh;
+  min-width: 50ch;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
