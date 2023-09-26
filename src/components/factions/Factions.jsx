@@ -8,17 +8,17 @@ import { useFaction } from '../hooks/useFaction';
 
 export default function Factions({ playerCount }) {
   const {
-    selectedFactions,
     cachedAddFaction,
     cachedRemoveFaction,
     isPlayerCountFull,
     currentReach,
+    requiredReach,
   } = useFaction(playerCount);
 
-  let reach = 0;
-  for (let players in reachData) {
-    if (players == playerCount) reach = reachData[playerCount];
-  }
+  // let reach = 0;
+  // for (let players in reachData) {
+  //   if (players == playerCount) reach = reachData[playerCount];
+  // }
 
   return (
     <div className={styles.Factions}>
@@ -29,7 +29,7 @@ export default function Factions({ playerCount }) {
         cachedRemoveFaction={cachedRemoveFaction}
       />
       <p>Current Reach: {currentReach}</p>
-      <p>Required Reach: {reach}</p>
+      <p>Required Reach: {requiredReach}</p>
     </div>
   );
 }
