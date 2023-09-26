@@ -4,20 +4,18 @@ import styles from './Faction.module.css';
 export default function Faction({
   title,
   reach,
-  setSelectedFactions,
   isPlayerCountFull,
+  cachedAddFaction,
+  cachedRemoveFaction,
 }) {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = () => setIsChecked((prev) => !prev);
 
   useEffect(() => {
-    if (isChecked) setSelectedFactions((prev) => [...prev, { title, reach }]);
-    else
-      setSelectedFactions((prev) =>
-        prev.filter((faction) => title !== faction.title)
-      );
-  }, [title, reach, isChecked, setSelectedFactions]);
+    if (isChecked) cachedAddFaction(title, reach);
+    else cachedRemoveFaction();
+  }, [title, reach, isChecked, cachedAddFaction, cachedRemoveFaction]);
 
   return (
     <li className={styles.Faction}>
