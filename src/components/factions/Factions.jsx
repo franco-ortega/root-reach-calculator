@@ -4,23 +4,11 @@ import { useCallback, useState } from 'react';
 import reachData from '../../data/reach';
 import FactionList from '../factionList/FactionList';
 import styles from './Factions.module.css';
+import { useFaction } from '../hooks/useFaction';
 
 export default function Factions({ playerCount }) {
-  const [selectedFactions, setSelectedFactions] = useState([]);
-
-  const addFaction = (title, reach) => {
-    setSelectedFactions((prev) => [...prev, { title, reach }]);
-  };
-
-  const cachedAddFaction = useCallback(addFaction, []);
-
-  const removeFaction = (title) => {
-    setSelectedFactions((prev) =>
-      prev.filter((faction) => title !== faction.title)
-    );
-  };
-
-  const cachedRemoveFaction = useCallback(removeFaction, []);
+  const { selectedFactions, cachedAddFaction, cachedRemoveFaction } =
+    useFaction();
 
   const factionCount = selectedFactions.length;
   const isPlayerCountFull = playerCount === factionCount && playerCount > 0;
