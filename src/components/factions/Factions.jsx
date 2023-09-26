@@ -7,11 +7,12 @@ import styles from './Factions.module.css';
 import { useFaction } from '../hooks/useFaction';
 
 export default function Factions({ playerCount }) {
-  const { selectedFactions, cachedAddFaction, cachedRemoveFaction } =
-    useFaction();
-
-  const factionCount = selectedFactions.length;
-  const isPlayerCountFull = playerCount === factionCount && playerCount > 0;
+  const {
+    selectedFactions,
+    cachedAddFaction,
+    cachedRemoveFaction,
+    isPlayerCountFull,
+  } = useFaction(playerCount);
 
   const currentReach = selectedFactions.reduce(
     (acc, cur) => acc + cur.reach,

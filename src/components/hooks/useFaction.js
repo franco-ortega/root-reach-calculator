@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 
-export const useFaction = () => {
+export const useFaction = (playerCount) => {
   const [selectedFactions, setSelectedFactions] = useState([]);
 
   const addFaction = (title, reach) => {
@@ -17,9 +17,13 @@ export const useFaction = () => {
 
   const cachedRemoveFaction = useCallback(removeFaction, []);
 
+  const factionCount = selectedFactions.length;
+  const isPlayerCountFull = playerCount === factionCount && playerCount > 0;
+
   return {
     selectedFactions,
     cachedAddFaction,
     cachedRemoveFaction,
+    isPlayerCountFull,
   };
 };
