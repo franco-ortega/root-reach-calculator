@@ -20,10 +20,16 @@ export const useFaction = (playerCount) => {
   const factionCount = selectedFactions.length;
   const isPlayerCountFull = playerCount === factionCount && playerCount > 0;
 
+  const currentReach = selectedFactions.reduce(
+    (acc, cur) => acc + cur.reach,
+    0
+  );
+
   return {
     selectedFactions,
     cachedAddFaction,
     cachedRemoveFaction,
     isPlayerCountFull,
+    currentReach,
   };
 };

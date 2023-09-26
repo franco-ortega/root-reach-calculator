@@ -12,12 +12,8 @@ export default function Factions({ playerCount }) {
     cachedAddFaction,
     cachedRemoveFaction,
     isPlayerCountFull,
+    currentReach,
   } = useFaction(playerCount);
-
-  const currentReach = selectedFactions.reduce(
-    (acc, cur) => acc + cur.reach,
-    0
-  );
 
   let reach = 0;
   for (let players in reachData) {
