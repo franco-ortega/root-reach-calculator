@@ -5,8 +5,9 @@ import Faction from '../faction/Faction';
 import styles from './FactionList.module.css';
 
 export default function FactionList({
-  setSelectedFactions,
   isPlayerCountFull,
+  cachedAddFaction,
+  cachedRemoveFaction,
 }) {
   return (
     <ul className={styles.FactionList}>
@@ -15,8 +16,9 @@ export default function FactionList({
           key={title}
           title={title}
           reach={reach}
-          setSelectedFactions={setSelectedFactions}
           isPlayerCountFull={isPlayerCountFull}
+          cachedAddFaction={cachedAddFaction}
+          cachedRemoveFaction={cachedRemoveFaction}
         />
       ))}
     </ul>
